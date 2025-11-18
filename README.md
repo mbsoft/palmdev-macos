@@ -1,5 +1,9 @@
 # Palm OS Development for macOS
 
+[![Build Palm OS App](https://github.com/savaughn/palmdev-macos/actions/workflows/build.yml/badge.svg)](https://github.com/savaughn/palmdev-macos/actions/workflows/build.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub issues](https://img.shields.io/github/issues/savaughn/palmdev-macos)](https://github.com/savaughn/palmdev-macos/issues)
+
 A complete Palm OS development environment for macOS ARM (Apple Silicon) with pre-built toolchain, SDK, and hello world template.
 
 ## Quick Start

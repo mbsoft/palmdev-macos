@@ -8,7 +8,6 @@ CREATOR_ID = HlWd
 # Source files
 SOURCES = $(APP_NAME).c
 RESOURCES = $(APP_NAME).rcp
-HEADERS = $(APP_NAME).h
 
 # Get script directory for toolchain
 TOOLCHAIN_DIR := $(shell cd .. && pwd)/toolchain

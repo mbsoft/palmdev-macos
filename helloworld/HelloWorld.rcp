@@ -2,7 +2,8 @@
  * HelloWorld Resource File
  */
 
-#include "HelloWorld.h"
+// Resource ID definitions
+#define MainForm 1000
 
 // Main Form
 FORM ID MainForm AT (0 0 160 160)

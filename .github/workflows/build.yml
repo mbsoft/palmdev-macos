@@ -1,0 +1,42 @@
+name: Build Palm OS App
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-latest  # Uses macOS ARM64 (Apple Silicon)
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: Setup Palm OS toolchain
+      run: |
+        chmod +x setup-toolchain.sh
+        ./setup-toolchain.sh
+    
+    - name: Build HelloWorld application
+      working-directory: ./helloworld
+      run: make build
+    
+    - name: Verify build output
+      run: |
+        if [ -f helloworld/build/HelloWorld.prc ]; then
+          echo "✅ Build successful!"
+          ls -lh helloworld/build/HelloWorld.prc
+        else
+          echo "❌ Build failed - HelloWorld.prc not found"
+          exit 1
+        fi
+    
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: HelloWorld-prc
+        path: helloworld/build/HelloWorld.prc
+        if-no-files-found: error
