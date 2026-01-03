@@ -1,0 +1,14 @@
+/*
+ * ApiTest Resource File
+ */
+
+// Resource ID definitions
+#define MainForm 1000
+
+// Main Form
+FORM ID MainForm AT (0 0 160 160)
+USABLE
+BEGIN
+    TITLE "ApiTest"
+END
+
